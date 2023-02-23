@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="bg-light w-100" style="border-bottom: 2px #aaa solid;">
+  <nav class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-1">
+      <ul class="nav">
+        <li class="nav-item"><a href="/" class="nav-link">Homepage...</a></li>
+        <li class="nav-item"><a href="{% url "chat" %}" class="nav-link">Enter the room...</a></li>
+        <li class="nav-item"><a href="/guides" class="nav-link">Access the guides...</a></li>
+        <li class="nav-item"><a href="{% url "contact" %}" class="nav-link">Contact the site managers...</a></li>
+      </ul>
+    </header>
+  </nav>
+    </div>
+
+<div class="container p-5" id="main">
+    {% block main %}
+<h1 class="main grad">This is the homepage</h1>
+<p class="lead">This page is for anyone at all that has anything to
+    do with the care system, or anyone who wants to get involved, or anyone who knows someone
+    that is involved.</p>
+    <p><a href="/chat" class="btn btn-success">Enter the room</a>
+    <a href="/info" class="btn btn-danger">Access the guides</a></p>
+        {% endblock %}
+    </div>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "basemain.html" %}
+{% block main %}
+<h1>Profile Edit</h1>
+    <form>
+{% form.as_p %}
+    {% csrf_token %}
+<button type="submit" value="submit">
+</button>
+    </form>
+{% endblock %}

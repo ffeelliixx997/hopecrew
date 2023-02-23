@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block body %}
+    <h1>Contact the website managers:</h1>
+    <form>
+    {{ form.as_p }}
+    {% csrf_token %}
+    <button type="submit" value="send"></button>
+    </form>
+{% endblock %}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .info{
+            background-color: cadetblue;
+            border-bottom: 1px #222 solid;
+        }
+        .chatwindow{
+            display: flex;
+            width: 100%;
+            height:100%;
+        }
+        .chathistory{
+            width:;
+            height:auto;
+            flex-grow: 1;
+            background-color: lightskyblue;
+        }
+        .chatusers{
+            height:auto;
+            order:2;
+            width:140px;
+        }
+    </style>
+    <script src="https://unpkg.com/htmx.org@1.8.5"></script>
+</head>
+<body>
+<div class="info">
+    <a href="">Home</a>
+    <a href=""></a>
+</div>
+<div class="chatwindow">
+    <div class="chathistory" hx-get="{% url "chat_api_log" %}" hx-swap="innerHTML" hx-trigger="every 2s">
+<ul><li>loading...</li></ul>
+    </div>
+    <div class="chatusers">
+<ul><li>test</li></ul>
+
+    </div>
+</div>
+</body>
+</html>

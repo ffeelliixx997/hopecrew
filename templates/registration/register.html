@@ -1,0 +1,14 @@
+{% extends "basemain.html" %}
+{% block main %}
+    <h1>Register</h1>
+    <p class="lead">Fill out your details below:</p>
+    <ul>
+    </ul>
+    <form method="POST">
+    {{ form.as_p }}
+    {% csrf_token %}
+    <input type="submit" value="Register">
+    </form>
+    <br />
+    <p><a href="{% url "login" %}">Login instead...</a></p>
+{% endblock %}

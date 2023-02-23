@@ -1,0 +1,16 @@
+{% extends "basemain.html" %}
+{% block main %}
+    <h1>Login</h1>
+    <p class="lead">Please log in below:</p>
+    <ul>
+    {% for field in form %}
+	{% if field.errors %}<li>{{ field.errors|striptags }}</li>{% endif %}
+	{% endfor %}
+    </ul>
+    <form method="POST">
+    {{ form.as_p }}
+    {% csrf_token %}
+    <input type="submit" value="Login">
+    </form>
+    <p><a href="{% url "register" %}">Register...</a></p>
+{% endblock %}

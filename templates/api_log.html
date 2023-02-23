@@ -1,0 +1,5 @@
+<ul>
+    {% for msg in messages %}
+    <li>{{ msg.profile.username }}: {{ msg.body }}</li>
+    {% endfor %}
+</ul>
